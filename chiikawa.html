@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chiikawa</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+  </head>
+  <body>
+    <h1>Chiikawa list</h1>
+    <ul></ul>
+
+    <script>
+      const ul = document.querySelector("ul");
+      const characters = [
+        "Chiikawa",
+        "Hachiware",
+        "Usagi",
+        "Momonga",
+        "Kuri manju",
+        "Shisa",
+        "Rakko",
+        "Kabutomushi",
+      ];
+
+      console.log("Chiikawa");
+
+      characters.forEach(createList);
+
+      function createList(character) {
+        console.log("Chiikawa function");
+        ul.innerHTML += `<li>${character}</li>`;
+      }
+    </script>
+  </body>
+</html>
