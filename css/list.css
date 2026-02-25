@@ -1,0 +1,83 @@
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto;
+  place-items: center;
+  gap: 2rem;
+}
+
+.card_link {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-row: span 4;
+  gap: 1rem;
+  box-shadow:
+    -4px -4px 10px rgba(255, 255, 255, 0.7),
+    4px 4px 10px rgba(0, 0, 0, 0.06),
+    inset 0 0 0 rgba(0, 0, 0, 0);
+  background-color: #f4f3ef;
+  padding: 2rem;
+  border-radius: 20px;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow:
+    0 0 0 rgba(255, 255, 255, 0),
+    0 0 0 rgba(0, 0, 0, 0),
+    inset 4px 4px 10px rgba(0, 0, 0, 0.06),
+    inset -4px -4px 10px rgba(255, 255, 255, 0.7);
+}
+
+.img {
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.old_price {
+  text-decoration: line-through;
+  color: #d1d1cf;
+}
+
+.procent {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  background-color: rgba(177, 177, 175, 1);
+  color: #f4f3ef;
+  z-index: 2;
+}
+
+.filter {
+  position: absolute;
+  inset: 0;
+  background-color: rgb(245, 245, 243, 0.9);
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.out_of_stock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
