@@ -33,3 +33,13 @@ a {
     inset 4px 4px 10px rgba(0, 0, 0, 0.06),
     inset -4px -4px 10px rgba(255, 255, 255, 0.7);
 }
+
+@media (max-width: 425px) {
+  .grid_1_1_1 {
+    display: block;
+  }
+  .button {
+    display: block;
+    margin: 0 2rem 2rem 2rem;
+  }
+}

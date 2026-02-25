@@ -9,6 +9,7 @@
     inset 0 0 0 rgba(0, 0, 0, 0);
   padding: 2rem;
   border-radius: 20px;
+  margin-bottom: 2rem;
 }
 
 .breadcrumb {
@@ -65,4 +66,46 @@ section {
     0 0 0 rgba(0, 0, 0, 0),
     inset 4px 4px 10px rgba(0, 0, 0, 0.06),
     inset -4px -4px 10px rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 425px) {
+  .breadcrumb {
+    margin: 0 2rem 0.5rem 2rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .grid_1_1 {
+    display: block;
+    margin: 0 2rem 2rem 2rem;
+  }
+
+  section {
+    padding-top: 1rem;
+  }
+
+  .name {
+    font-size: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
+
+  .brand {
+    font-size: 1.1rem;
+  }
+
+  .price {
+    font-size: 1.1rem;
+    padding-bottom: 1.2rem;
+  }
+
+  .status {
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .buy {
+    padding: 1rem 3.5rem;
+    font-size: 1rem;
+    margin: 0 auto;
+    width: 100%;
+  }
 }
