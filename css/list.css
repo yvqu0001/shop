@@ -81,3 +81,13 @@ main {
   text-align: center;
   z-index: 2;
 }
+
+@media (max-width: 425px) {
+  main {
+    display: block;
+    margin: 0 2rem;
+  }
+  .card_link {
+    margin-bottom: 3rem;
+  }
+}
