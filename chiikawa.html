@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="css/reset.css" />
   </head>
   <body>
-    <h1>Chiikawa list</h1>
-    <ul></ul>
+    <article>
+      <h1>Chiikawa list</h1>
+      <ul></ul>
+    </article>
+
+    <article class="card"></article>
 
     <script>
       const ul = document.querySelector("ul");
@@ -33,5 +37,6 @@
         ul.innerHTML += `<li>${character}</li>`;
       }
     </script>
+    <script src="js/chiikawa.js"></script>
   </body>
 </html>
