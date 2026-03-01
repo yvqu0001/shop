@@ -1,4 +1,13 @@
-main {
+.title {
+  margin: 0 auto;
+  max-width: 1200px;
+  text-align: center;
+  padding-bottom: 4rem;
+  font-size: 1.5rem;
+  text-transform: lowercase;
+}
+
+.list_container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin: 0 auto;
@@ -9,6 +18,7 @@ main {
 .card_link {
   display: block;
   width: 100%;
+  height: 100%;
   text-decoration: none;
   color: inherit;
 }
@@ -27,6 +37,7 @@ main {
   border-radius: 20px;
   transition: box-shadow 0.3s ease;
   cursor: pointer;
+  height: 100%;
 }
 
 .card:hover {
@@ -82,8 +93,17 @@ main {
   z-index: 2;
 }
 
+.name {
+  display: -webkit-box; /* old flexbox, enables "line-clamp" */
+  -webkit-line-clamp: 2; /* show max 2 lines of text */
+  -webkit-box-orient: vertical; /* stack content vertically */
+  overflow: hidden;
+  line-height: 1.2;
+  min-height: calc(1.2em * 2);
+}
+
 @media (max-width: 425px) {
-  main {
+  .list_container {
     display: block;
     margin: 0 2rem;
   }
