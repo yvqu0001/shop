@@ -7,69 +7,73 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/list.css" />
+    <script src="js/list.js" defer></script>
   </head>
   <body>
     <header>
       <a href="index.html" class="header">Shop</a>
     </header>
     <main>
-      <!-- NORMAL -->
-      <a href="product.html" class="card_link">
-        <article class="card">
-          <img src="img/puma.webp" alt="Image of Puma bag" class="img" />
-          <h3 class="brand">PUMA</h3>
-          <h2 class="name">PUMA Phase Backpack</h2>
-          <h4 class="price">300kr</h4>
-        </article>
-      </a>
-
-      <!-- SALE -->
-      <a href="product.html" class="card_link">
-        <article class="card sale">
-          <div class="img">
+      <h1 class="title"></h1>
+      <section class="list_container">
+        <!-- NORMAL -->
+        <a href="product.html" class="card_link">
+          <article class="card">
             <img src="img/puma.webp" alt="Image of Puma bag" class="img" />
-            <p class="procent">-30%</p>
-          </div>
-          <h3 class="brand">PUMA</h3>
-          <h2 class="name">PUMA Phase Backpack</h2>
-          <span class="flex">
-            <h4 class="price">200kr</h4>
-            <h4 class="price old_price">300kr</h4></span
-          >
-        </article>
-      </a>
+            <h3 class="brand">PUMA</h3>
+            <h2 class="name">PUMA Phase Backpack</h2>
+            <h4 class="price">300kr</h4>
+          </article>
+        </a>
 
-      <!-- SOLD OUT -->
-      <a href="product.html" class="card_link">
-        <article class="card sold_out">
-          <div class="img">
-            <img src="img/puma.webp" alt="Image of Puma bag" class="img" />
-            <div class="filter"></div>
-            <h2 class="out_of_stock">Out of stock</h2>
-          </div>
-          <h3 class="brand">PUMA</h3>
-          <h2 class="name">PUMA Phase Backpack</h2>
-          <h4 class="price">300kr</h4>
-        </article>
-      </a>
+        <!-- SALE -->
+        <a href="product.html" class="card_link">
+          <article class="card sale">
+            <div class="img">
+              <img src="img/puma.webp" alt="Image of Puma bag" class="img" />
+              <p class="procent">-30%</p>
+            </div>
+            <h3 class="brand">PUMA</h3>
+            <h2 class="name">PUMA Phase Backpack</h2>
+            <span class="flex">
+              <h4 class="price">200kr</h4>
+              <h4 class="price old_price">300kr</h4></span
+            >
+          </article>
+        </a>
 
-      <!-- SALE & SOLD OUT -->
-      <a href="product.html" class="card_link">
-        <article class="card sale sold_out">
-          <div class="img">
-            <img src="img/puma.webp" alt="Image of Puma bag" class="img" />
-            <p class="procent">-30%</p>
-            <div class="filter"></div>
-            <h2 class="out_of_stock">Out of stock</h2>
-          </div>
-          <h3 class="brand">PUMA</h3>
-          <h2 class="name">PUMA Phase Backpack</h2>
-          <span class="flex">
-            <h4 class="price">200kr</h4>
-            <h4 class="price old_price">300kr</h4></span
-          >
-        </article>
-      </a>
+        <!-- SOLD OUT -->
+        <a href="product.html" class="card_link">
+          <article class="card sold_out">
+            <div class="img">
+              <img src="img/puma.webp" alt="Image of Puma bag" class="img" />
+              <div class="filter"></div>
+              <h2 class="out_of_stock">Out of stock</h2>
+            </div>
+            <h3 class="brand">PUMA</h3>
+            <h2 class="name">PUMA Phase Backpack</h2>
+            <h4 class="price">300kr</h4>
+          </article>
+        </a>
+
+        <!-- SALE & SOLD OUT -->
+        <a href="product.html" class="card_link">
+          <article class="card sale sold_out">
+            <div class="img">
+              <img src="img/puma.webp" alt="Image of Puma bag" class="img" />
+              <p class="procent">-30%</p>
+              <div class="filter"></div>
+              <h2 class="out_of_stock">Out of stock</h2>
+            </div>
+            <h3 class="brand">PUMA</h3>
+            <h2 class="name">PUMA Phase Backpack</h2>
+            <span class="flex">
+              <h4 class="price">200kr</h4>
+              <h4 class="price old_price">300kr</h4></span
+            >
+          </article>
+        </a>
+      </section>
     </main>
     <footer></footer>
   </body>
