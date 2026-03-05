@@ -102,6 +102,11 @@
   min-height: calc(1.2em * 2);
 }
 
+button {
+  border: none;
+  cursor: pointer;
+}
+
 @media (max-width: 425px) {
   .list_container {
     display: block;

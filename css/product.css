@@ -12,10 +12,6 @@
   margin-bottom: 2rem;
 }
 
-.breadcrumb {
-  padding-bottom: 2rem;
-}
-
 .img img {
   border-radius: 20px;
 }
@@ -114,11 +110,6 @@ section {
 }
 
 @media (max-width: 425px) {
-  .breadcrumb {
-    margin: 0 2rem 0.5rem 2rem;
-    padding-bottom: 0.5rem;
-  }
-
   .grid_1_1 {
     display: block;
     margin: 0 2rem 2rem 2rem;

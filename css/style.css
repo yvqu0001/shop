@@ -42,3 +42,14 @@ header {
   font-style: italic;
   font-weight: 400;
 }
+
+.breadcrumb {
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 425px) {
+  .breadcrumb {
+    margin: 0 2rem 0.5rem 2rem;
+    padding-bottom: 0.5rem;
+  }
+}
