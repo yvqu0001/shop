@@ -2,7 +2,7 @@
   margin: 0 auto;
   max-width: 1200px;
   text-align: center;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
   font-size: 1.5rem;
   text-transform: lowercase;
 }
@@ -26,15 +26,14 @@
 .card {
   display: grid;
   grid-template-columns: subgrid;
-  grid-row: span 4;
-  gap: 1rem;
+  grid-row: span 2;
   box-shadow:
     -4px -4px 10px rgba(255, 255, 255, 0.7),
     4px 4px 10px rgba(0, 0, 0, 0.06),
     inset 0 0 0 rgba(0, 0, 0, 0);
   background-color: #f4f3ef;
-  padding: 2rem;
-  border-radius: 20px;
+  padding: 1.5rem;
+  border-radius: 44px;
   transition: box-shadow 0.3s ease;
   cursor: pointer;
   height: 100%;
@@ -46,6 +45,13 @@
     0 0 0 rgba(0, 0, 0, 0),
     inset 4px 4px 10px rgba(0, 0, 0, 0.06),
     inset -4px -4px 10px rgba(255, 255, 255, 0.7);
+}
+
+.info {
+  margin: 1rem;
+  display: grid;
+  grid-template-rows: span 3;
+  gap: 1rem;
 }
 
 .img {

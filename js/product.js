@@ -11,8 +11,8 @@ function getData() {
 function renderProduct(product) {
   console.log(product);
   container.innerHTML += `<nav class="breadcrumb">
-        <a href="index.html">Categories</a> > <a href="list.html?category=${product.category}">${product.category}</a> >
-        <span>${product.productdisplayname}</span>
+        <a href="index.html" small_button>Categories</a> > <a href="list.html?category=${product.category}" small_button>${product.category}</a> >
+        <span class="small_button">${product.productdisplayname}</span>
       </nav>
       <article class="grid_1_1">
         <div class="img">
