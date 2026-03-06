@@ -1,48 +1,71 @@
 const listContainer = document.querySelector(".list_container");
 const breadcrumb = document.querySelector(".crumb_sec");
+const filters = document.querySelector(".filters");
+const sort = document.querySelector(".sort");
 
 const category = new URLSearchParams(window.location.search).get("category");
 const endpoint = `https://kea-alt-del.dk/t7/api/products?category=${category}`;
 document.querySelector(".title").textContent = category;
 
 let allData;
+let part;
 
 function getData() {
   fetch(endpoint)
     .then((response) => response.json())
     .then((data) => {
-      allData = data;
+      allData = part = data;
       showProducts(allData);
     });
 }
 
-function crumb_sec() {
+function crumbSec() {
   console.log(category);
-  breadcrumb.innerHTML += `<span class="flex">
+  breadcrumb.innerHTML += `
     <nav class="breadcrumb">
-      <a href="index.html">Categories</a> > <a href="list.html?category=${category}">${category}</a>
+      <a href="index.html" class="small_button">Categories</a> > <a href="list.html?category=${category}" class="small_button">${category}</a>
     </nav>
-      <div>
-        <button class="button">All</button>
-        <button class="button">Unisex</button>
-        <button class="button">Women</button>
-        <button class="button">Men</button>  
-      </div>
-    </span>
   `;
-  breadcrumb
+  filters
     .querySelectorAll(".button")
     .forEach((button) => button.addEventListener("click", filter));
+  sort
+    .querySelectorAll(".button")
+    .forEach((button) => button.addEventListener("click", sorting));
 }
 
 function filter(e) {
   const chosen = e.target.textContent;
+  console.log(chosen);
   if (chosen == "All") {
     showProducts(allData);
   } else {
-    const part = allData.filter((element) => element.gender == chosen);
+    part = allData.filter((element) => element.gender == chosen);
     showProducts(part);
   }
+}
+
+function sorting(e) {
+  if (e.target.dataset.price) {
+    const dir = e.target.dataset.price;
+    if (dir == "up") {
+      part.sort((a, b) => a.price - b.price);
+    } else {
+      part.sort((a, b) => b.price - a.price);
+    }
+  } else {
+    const dir = e.target.dataset.text;
+    if (dir == "az") {
+      part.sort((a, b) =>
+        a.productdisplayname.localeCompare(b.productdisplayname, "en"),
+      );
+    } else {
+      part.sort((a, b) =>
+        b.productdisplayname.localeCompare(a.productdisplayname, "en"),
+      );
+    }
+  }
+  showProducts(part);
 }
 
 function showProducts(products) {
@@ -64,16 +87,19 @@ function showProducts(products) {
                    : ""
                }
           </div>
-          <h3 class="brand">${product.brandname}</h3>
-          <h2 class="name">${product.productdisplayname}</h2>
-          <span class="flex">
-            <h4 class="price">${Math.round(product.price - (product.price * product.discount) / 100)} kr.</h4>
-            ${
-              product.discount
-                ? `<h4 class="price old_price">${product.price} kr.</h4>`
-                : ""
-            }
-          </span>
+                    <div class="info">
+
+            <h3 class="brand">${product.brandname}</h3>
+            <h2 class="name">${product.productdisplayname}</h2>
+            <span class="flex">
+              <h4 class="price">${Math.round(product.price - (product.price * product.discount) / 100)} kr.</h4>
+              ${
+                product.discount
+                  ? `<h4 class="price old_price">${product.price} kr.</h4>`
+                  : ""
+              }
+            </span>
+            </div>
         </article>
       </a>`;
   });
@@ -82,4 +108,4 @@ function showProducts(products) {
 }
 
 getData();
-crumb_sec();
+crumbSec();

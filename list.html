@@ -15,7 +15,30 @@
     </header>
     <main>
       <h1 class="title"></h1>
-      <section class="crumb_sec"></section>
+      <section>
+        <span class="flex">
+          <div class="crumb_sec"></div>
+          <div class="sort">
+            <span>Sort by:</span>
+            <button class="button small_button" data-text="az">A - Z</button>
+            <button class="button small_button" data-text="za">Z - A</button>
+            <button class="button small_button" data-price="up">
+              Low to high
+            </button>
+            <button class="button small_button" data-price="down">
+              High to low
+            </button>
+          </div>
+          <div class="filters">
+            <span>Filter by:</span>
+
+            <button class="button small_button">All</button>
+            <button class="button small_button">Unisex</button>
+            <button class="button small_button">Women</button>
+            <button class="button small_button">Men</button>
+          </div>
+        </span>
+      </section>
       <section class="list_container"></section>
     </main>
     <footer></footer>
